@@ -13,6 +13,10 @@ import 'package:provider/provider.dart';
 import 'novo_chamado_model.dart';
 export 'novo_chamado_model.dart';
 
+import 'package:logging/logging.dart';
+
+final Logger _logger = Logger('NovoChamadoWidget');
+
 class NovoChamadoWidget extends StatefulWidget {
   const NovoChamadoWidget({
     super.key,
@@ -91,13 +95,15 @@ class _NovoChamadoWidgetState extends State<NovoChamadoWidget> {
           actions: [
             FFButtonWidget(
               onPressed: () {
-                print('Button pressed ...');
+                _logger.info('Button pressed ...');
               },
               text: 'Salvar',
               options: FFButtonOptions(
                 height: 40.0,
-                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                padding:
+                    const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                iconPadding:
+                    const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                 color: const Color(0xFF3976EF),
                 textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                       fontFamily: 'Readex Pro',
@@ -421,7 +427,6 @@ class _NovoChamadoWidgetState extends State<NovoChamadoWidget> {
 
                                     shouldSetState = true;
                                   } else {
-                                    if (shouldSetState) setState(() {});
                                     return;
                                   }
 

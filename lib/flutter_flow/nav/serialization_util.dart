@@ -1,15 +1,13 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:logging/logging.dart';
 
 import '/backend/backend.dart';
-
 import '/backend/supabase/supabase.dart';
 
 import '../../flutter_flow/place.dart';
 import '../../flutter_flow/uploaded_file.dart';
-
-/// SERIALIZATION HELPERS
 
 String dateTimeRangeToString(DateTimeRange dateTimeRange) {
   final startStr = dateTimeRange.start.millisecondsSinceEpoch.toString();
@@ -66,31 +64,31 @@ String? serializeParam(
         data = param.toString();
       case ParamType.double:
         data = param.toString();
-      case ParamType.String:
+      case ParamType.string:
         data = param;
       case ParamType.bool:
         data = param ? 'true' : 'false';
-      case ParamType.DateTime:
+      case ParamType.dateTime:
         data = (param as DateTime).millisecondsSinceEpoch.toString();
-      case ParamType.DateTimeRange:
+      case ParamType.dateTimeRange:
         data = dateTimeRangeToString(param as DateTimeRange);
-      case ParamType.LatLng:
+      case ParamType.latLng:
         data = (param as LatLng).serialize();
-      case ParamType.Color:
+      case ParamType.color:
         data = (param as Color).toCssString();
-      case ParamType.FFPlace:
+      case ParamType.fFPlace:
         data = placeToString(param as FFPlace);
-      case ParamType.FFUploadedFile:
+      case ParamType.fFUploadedFile:
         data = uploadedFileToString(param as FFUploadedFile);
-      case ParamType.JSON:
+      case ParamType.jSON:
         data = json.encode(param);
-      case ParamType.DocumentReference:
+      case ParamType.documentReference:
         data = _serializeDocumentReference(param as DocumentReference);
-      case ParamType.Document:
+      case ParamType.document:
         final reference = (param as FirestoreRecord).reference;
         data = _serializeDocumentReference(reference);
 
-      case ParamType.SupabaseRow:
+      case ParamType.supabaseRow:
         return json.encode((param as SupabaseDataRow).data);
 
       default:
@@ -98,7 +96,7 @@ String? serializeParam(
     }
     return data;
   } catch (e) {
-    print('Error serializing parameter: $e');
+    _logger.severe('Error serializing parameter: $e');
     return null;
   }
 }
@@ -171,20 +169,21 @@ DocumentReference _deserializeDocumentReference(
 enum ParamType {
   int,
   double,
-  String,
+  string,
   bool,
-  DateTime,
-  DateTimeRange,
-  LatLng,
-  Color,
-  FFPlace,
-  FFUploadedFile,
-  JSON,
-
-  Document,
-  DocumentReference,
-  SupabaseRow,
+  dateTime,
+  dateTimeRange,
+  latLng,
+  color,
+  fFPlace,
+  fFUploadedFile,
+  jSON,
+  document,
+  documentReference,
+  supabaseRow,
 }
+
+final Logger _logger = Logger('YourLoggerName');
 
 dynamic deserializeParam<T>(
   String? param,
@@ -210,69 +209,69 @@ dynamic deserializeParam<T>(
           .map((p) => p! as T)
           .toList();
     }
+
     switch (paramType) {
       case ParamType.int:
         return int.tryParse(param);
       case ParamType.double:
         return double.tryParse(param);
-      case ParamType.String:
+      case ParamType.string:
         return param;
       case ParamType.bool:
         return param == 'true';
-      case ParamType.DateTime:
+      case ParamType.dateTime:
         final milliseconds = int.tryParse(param);
         return milliseconds != null
             ? DateTime.fromMillisecondsSinceEpoch(milliseconds)
             : null;
-      case ParamType.DateTimeRange:
+      case ParamType.dateTimeRange:
         return dateTimeRangeFromString(param);
-      case ParamType.LatLng:
+      case ParamType.latLng:
         return latLngFromString(param);
-      case ParamType.Color:
+      case ParamType.color:
         return fromCssColor(param);
-      case ParamType.FFPlace:
+      case ParamType.fFPlace:
         return placeFromString(param);
-      case ParamType.FFUploadedFile:
+      case ParamType.fFUploadedFile:
         return uploadedFileFromString(param);
-      case ParamType.JSON:
+      case ParamType.jSON:
         return json.decode(param);
-      case ParamType.DocumentReference:
+      case ParamType.documentReference:
         return _deserializeDocumentReference(param, collectionNamePath ?? []);
 
-      case ParamType.SupabaseRow:
+      case ParamType.supabaseRow:
         final data = json.decode(param) as Map<String, dynamic>;
-        switch (T) {
-          case TiposRow:
-            return TiposRow(data);
-          case TbprodutoRow:
-            return TbprodutoRow(data);
-          case TbitensRow:
-            return TbitensRow(data);
-          case MotivosRow:
-            return MotivosRow(data);
-          case TbContatoRow:
-            return TbContatoRow(data);
-          case TbJogadorRow:
-            return TbJogadorRow(data);
-          case BanksRow:
-            return BanksRow(data);
-          case TbProjetoFedexRow:
-            return TbProjetoFedexRow(data);
-          case UsuriosRow:
-            return UsuriosRow(data);
-          case DddsRow:
-            return DddsRow(data);
-          case TbFedexOperacionalRow:
-            return TbFedexOperacionalRow(data);
-          default:
-            return null;
+        if (T == TiposRow) {
+          return TiposRow(data);
+        } else if (T == TbprodutoRow) {
+          return TbprodutoRow(data);
+        } else if (T == TbitensRow) {
+          return TbitensRow(data);
+        } else if (T == MotivosRow) {
+          return MotivosRow(data);
+        } else if (T == TbContatoRow) {
+          return TbContatoRow(data);
+        } else if (T == TbJogadorRow) {
+          return TbJogadorRow(data);
+        } else if (T == BanksRow) {
+          return BanksRow(data);
+        } else if (T == TbProjetoFedexRow) {
+          return TbProjetoFedexRow(data);
+        } else if (T == UsuriosRow) {
+          return UsuriosRow(data);
+        } else if (T == DddsRow) {
+          return DddsRow(data);
+        } else if (T == TbFedexOperacionalRow) {
+          return TbFedexOperacionalRow(data);
+        } else {
+          return null;
         }
 
       default:
         return null;
     }
   } catch (e) {
-    print('Error deserializing parameter: $e');
+    _logger.severe('Error deserializing parameter: $e');
     return null;
   }
 }

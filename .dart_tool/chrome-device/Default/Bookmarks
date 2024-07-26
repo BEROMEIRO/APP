@@ -1,0 +1,418 @@
+{
+   "checksum": "2460db1b2210840ba87c60dd5acba483",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13314997855838472",
+            "date_last_used": "13333232277691121",
+            "guid": "115759a1-7c3f-48e0-b6be-157e132950ae",
+            "id": "8",
+            "name": "Aters",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://aters-fs.sequoialog.com.br/Aters/Login.asp"
+         }, {
+            "date_added": "13324482778174191",
+            "date_last_used": "13354916327616983",
+            "guid": "02e4c9cb-9c33-4de7-856d-4fbbd7db1fb8",
+            "id": "9",
+            "name": "C-Trends › Estoque Atual C-Trends",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://lookerstudio.google.com/reporting/e038701f-d313-4abe-a678-0cb972d227b3/page/p_h3w099lo3c"
+         }, {
+            "date_added": "13331405767402961",
+            "date_last_used": "13332021666116268",
+            "guid": "e3e6b1f7-00db-47dc-ba06-2ab735aa3df4",
+            "id": "10",
+            "name": "Recupera",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "http://187.32.253.1/recupera/"
+         }, {
+            "date_added": "13348158358793357",
+            "date_last_used": "0",
+            "guid": "6ae0b7a8-f97a-4715-b694-6fea0c8e7d9e",
+            "id": "11",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Como atualizar para o React 18 – React",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://react.dev/blog/2022/03/08/react-18-upgrade-guide#updates-to-client-rendering-apis"
+         }, {
+            "date_added": "13354122543312138",
+            "date_last_used": "13354916315009746",
+            "guid": "610fbf2c-b7a7-489a-8a1b-94b8fc9ddeaa",
+            "id": "12",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Million Free Games",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://millionfreegames.com/"
+         }, {
+            "date_added": "13354916291985573",
+            "date_last_used": "0",
+            "guid": "8aa3b9a9-0efd-4056-ba6d-7b28f2e92d79",
+            "id": "13",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "StoneLog API",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://stonelog.stone.com.br/api/docs#ordem-de-servi%C3%A7o-simular-ordem-de-servi%C3%A7o-get"
+         }, {
+            "date_added": "13355586431637136",
+            "date_last_used": "0",
+            "guid": "c9df2747-584f-4f39-9aa6-fbee50e1bf90",
+            "id": "14",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "IntegrationXmlAPI - Swagger UI",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "http://192.168.0.214/IntegrationXmlAPI/docs#/Cielo/Consulta_sincrona_api_v1_clo_sincrona__post"
+         }, {
+            "date_added": "13355946593274991",
+            "date_last_used": "0",
+            "guid": "69dec840-b02d-4deb-8ffe-e960b8274f7c",
+            "id": "15",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "API Docs",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "http://192.168.0.214/Retencao/docs"
+         }, {
+            "date_added": "13355949543753245",
+            "date_last_used": "0",
+            "guid": "43a9ca45-6cf0-4b33-a1c8-aec52c1d8bfe",
+            "id": "16",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "QuerySet API reference | Django documentation | Django",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://docs.djangoproject.com/en/4.2/ref/models/querysets/#field-lookups"
+         }, {
+            "date_added": "13355951713611936",
+            "date_last_used": "0",
+            "guid": "a39f119f-f874-4829-87b6-edfe827f494b",
+            "id": "17",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Django documentation | Django documentation | Django",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://docs.djangoproject.com/en/5.0/"
+         }, {
+            "date_added": "13358437805439605",
+            "date_last_used": "0",
+            "guid": "0e83ecc5-d076-40d4-a055-1fb4711e348b",
+            "id": "18",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Gerenciador PDF",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "http://localhost:8000/contas/gerenciadorpdf/"
+         }, {
+            "date_added": "13359128220815943",
+            "date_last_used": "0",
+            "guid": "847bbc78-8bfc-48e9-84a1-c10a62aeec7a",
+            "id": "19",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Course: Curso de Python 3 do básico ao avançado - com projetos reais | Udemy",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.udemy.com/course/python-3-do-zero-ao-avancado/learn/quiz/5696508#overview"
+         }, {
+            "date_added": "13362064394091029",
+            "date_last_used": "0",
+            "guid": "d1d13862-062b-461f-b0f1-bab70863443e",
+            "id": "20",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "C-Trends › Estoque Atual C-Trends",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://lookerstudio.google.com/u/1/reporting/e038701f-d313-4abe-a678-0cb972d227b3/page/p_h3w099lo3c"
+         }, {
+            "date_added": "13363099206550083",
+            "date_last_used": "0",
+            "guid": "4773586f-61b4-4b34-aa9e-21c1da33f5ff",
+            "id": "21",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Como-funciona-Join-SQL",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://media.licdn.com/dms/image/D5622AQFHfbO65sqc8Q/feedshare-shrink_2048_1536/0/1717939095315?e=1721260800&v=beta&t=Gqaaw5DL3Bklo7FsNWJoCLOKTox2GRHr27BGIBfhJqc"
+         }, {
+            "date_added": "13363202139747370",
+            "date_last_used": "0",
+            "guid": "45eae000-b9a6-48f9-960b-6cd6118fae7a",
+            "id": "22",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "API Docs",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "http://192.168.0.215/Retencao/docs#/Abertura/get_projetos_Retencao_api_v1_abertura_projetos_get"
+         }, {
+            "date_added": "13363472753497864",
+            "date_last_used": "0",
+            "guid": "abbae6f5-ec28-4197-a645-7f221b867d72",
+            "id": "23",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Solicitação e resposta de geolocalização  |  Geolocation API  |  Google for Developers",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://developers.google.com/maps/documentation/geolocation/requests-geolocation?hl=pt-br#body"
+         }, {
+            "date_added": "13363472757825401",
+            "date_last_used": "13364308210220160",
+            "guid": "a06cc332-cebd-45d5-ab5e-58b41ecc1dd2",
+            "id": "24",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Chaves e credenciais – Plataforma Google M… – My Maps Project – Console do Google Cloud",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://console.cloud.google.com/google/maps-apis/credentials?project=galvanic-wall-427116-s8"
+         }, {
+            "date_added": "13363476402767035",
+            "date_last_used": "13364308213498003",
+            "guid": "d227cff1-bf77-474e-be2a-2a7e762a6762",
+            "id": "25",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Credenciais – APIs e serviços – My Maps Project – Console do Google Cloud",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://console.cloud.google.com/apis/credentials?project=galvanic-wall-427116-s8"
+         }, {
+            "date_added": "13363476610401847",
+            "date_last_used": "13363809118317670",
+            "guid": "ea1ffa6e-c832-4efc-b52e-575f621a4d8c",
+            "id": "26",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Geolocation api - Pesquisar",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.bing.com/search?pglt=161&q=Geolocation+api&cvid=2a19379645ed4e4c8be3fb90cd03f81a&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQABhAMgYIAhBFGDsyBggDEAAYQDIGCAQQABhAMgYIBRAAGEAyBggGEEUYPDIGCAcQRRg8MgYICBBFGDzSAQg0NTk4ajBqMagCALACAA&FORM=ANNTA1&PC=U531"
+         }, {
+            "date_added": "13363476617824695",
+            "date_last_used": "0",
+            "guid": "4a8edf71-9484-4259-ae7a-6fd1df1a86e7",
+            "id": "27",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Console do Firebase",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://console.firebase.google.com/u/2/?hl=pt-br&fb_gclid=6fad4e4003bc1839edb728357e3b3b61&fb_utm_campaign=latam-BR-all-pt-dr-SKWS-all-all-trial-e-dr-1707800-LUAC0016441&fb_utm_content=text-ad-none-any-DEV_c-CRE_-ADGP_Hybrid%20%7C%20SKWS%20-%20MIX%20%7C%20Txt_%20Compute-Firebase-KWID_43700067403163247-kwd-78684157082834:loc-20&fb_utm_medium=cpc&fb_utm_source=bing&fb_utm_term=KW_Firebase-ST_Firebase&_gl=1*1gafhw9*_up*MQ..*_ga*ODE4OTU0ODIyLjE3MTgzODk0NjA.*_ga_CW55HF8NVT*MTcxODk3NTg4NS4yLjAuMTcxODk3NjAwNi42MC4wLjA.&gclid=6fad4e4003bc1839edb728357e3b3b61&gclsrc=3p.ds&pli=1"
+         }, {
+            "date_added": "13363731368750671",
+            "date_last_used": "0",
+            "guid": "1e9bbc27-56c2-4351-a284-83d0c50c78b5",
+            "id": "28",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "youtube.com/@neto.nocode/search?query=paisagismo",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.youtube.com/@neto.nocode/search?query=paisagismo"
+         }, {
+            "date_added": "13363906152235453",
+            "date_last_used": "0",
+            "guid": "0ba7f719-3f2c-413f-a9d1-8f6ffd1d1370",
+            "id": "29",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Live Tracking in Google Maps Using FlutterFlow and Firebase - Rider App",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://blog.flutterflow.io/live-tracking-google-maps-rider/"
+         }, {
+            "date_added": "13363906154515575",
+            "date_last_used": "0",
+            "guid": "bc4c75fb-2c0a-4393-bab6-37b1a6f829be",
+            "id": "30",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Live Tracking in Google Maps Using FlutterFlow and Firebase - Driver App",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://blog.flutterflow.io/live-tracking-google-maps-driver/"
+         }, {
+            "date_added": "13363907247614267",
+            "date_last_used": "13363962080343156",
+            "guid": "5e1b4157-98c5-46ae-a86f-f95337226b58",
+            "id": "31",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Current Device Location as JSON in API call",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://community.flutterflow.io/ask-the-community/post/use-current-device-location-as-json-in-api-call-VcQjzbCVaUlZFtL"
+         }, {
+            "date_added": "13363908620335626",
+            "date_last_used": "0",
+            "guid": "0288dbb8-a9e9-412b-9e3e-f89c5a9297d4",
+            "id": "32",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Current Device Location | FlutterFlow Docs",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://docs.flutterflow.io/advanced-functionality/global-properties/current-device-location"
+         }, {
+            "date_added": "13363908632531898",
+            "date_last_used": "13363962072758976",
+            "guid": "de9afa80-8b15-4f0d-ac1a-fd38bcda2a9c",
+            "id": "33",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Current device location 1",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://community.flutterflow.io/database-and-apis/post/current-device-location-T8zWlmspnixac57"
+         }, {
+            "date_added": "13363909044055486",
+            "date_last_used": "0",
+            "guid": "3bebd4e3-8bf7-46e2-b662-e55e0f1b3222",
+            "id": "34",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Get User Location Without a Map?",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://community.flutterflow.io/ask-the-community/post/get-user-location-without-a-map-HEsTOQYWPgaGSH6"
+         }, {
+            "date_added": "13363909104323090",
+            "date_last_used": "0",
+            "guid": "a537a5e6-ad0d-4a22-966d-134ffa539dea",
+            "id": "35",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Search - FlutterFlow Community",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://community.flutterflow.io/search?query=my%20location"
+         }, {
+            "date_added": "13365540420133430",
+            "date_last_used": "0",
+            "guid": "e3b06720-543e-4517-8446-7f56251b4386",
+            "id": "36",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "APPCTB-V2 - FlutterFlow",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://app.flutterflow.io/project/appctb-v2-nasoqh?tab=pageSelector&page=Criar_User"
+         } ],
+         "date_added": "13366405169488631",
+         "date_last_used": "0",
+         "date_modified": "13365540420133430",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Barra de favoritos",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "other": {
+         "children": [ {
+            "date_added": "13314997835803994",
+            "date_last_used": "0",
+            "guid": "c11405df-6770-4d39-b969-a85c34c3d41d",
+            "id": "7",
+            "name": "Aters",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://aters-fs.sequoialog.com.br/Aters/Login.asp"
+         } ],
+         "date_added": "13366405169488636",
+         "date_last_used": "0",
+         "date_modified": "13314997835803994",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Outros favoritos",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13366405169488640",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Favoritos do celular",
+         "source": "unknown",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CjEKDgiIgQISCNW/HuuQAQAAEgAqGC9ieGpmZHA2Rm56RHFLV1ViemJGcWc9PUgDoAYMEqsBCCQSpgEKHDl4bkdxWkRMdnVZME93bnJaNWMrbktpbVllbz0SJGUzYjA2NzIwLTU0M2UtNDUxNy04NDQ2LTdmNTYyNTFiNDM4NhgAIAAoADDJrc68izI48q7OvIsyQPKuzryLMkocNzcrTFNiRWxxMU5FWm1ybjN5TG82TjRwQmFVPVoiIiD////2eHlHenJTV0R4YTFyd1d4TFhoK1lPYk11WlNrPWWby2cYEqoBCB8SpQEKHHRFb0dwL09iZWVVRmIyMnN6OUJic01KdU1uTT0SJDVlMWI0MTU3LTk4YzUtNDZhZS1hODZmLWY5NTMzNzIyNmI1OBgAIAAoADD2noLbhTI4m7/tsYUyQJu/7bGFMkocMmo0UFJDOXk2Mk9RM3hJdWhCZk5HS2tlMVJvPVohIh////9Mb2pCVk1Nb1k4L1JmQ0w5WHA1aFlRSndzMm89ZfzOD1ASqwEIIhKmAQocY21ZOVRtT1lSV09jVHBRNHpuUWtYc0lkUk40PRIkM2JlYmQ0ZTMtOGJmNy00NmUyLWI2NjItZTU1ZTBmMWIzMjIyGAAgACgAMPqM27KFMjjrj9uyhTJA64/bsoUyShxsL3VLaXNHRFV6Um4yKzh2cks1a2ZKaXYyWWs9WiIiIP///9tURVdMdEpzUi9xVFB2alY0a1h6SDA3VGROTGM9ZfzOD1ASqgEIHhKlAQocMHl6REhsVTNaclVYZGVVMFB0KzlONC85SVpRPRIkYmM0Yzc1ZmItMmMwYS00MzkzLWJhYjYtMzdiMWE2ZjgyOWJlGAAgACgAMLfjqrGFMjjg5KqxhTJA4OSqsYUyShw5VjNUTTZ6YjR5by9vZ3RXbHhqWjRhL0hzNTQ9WiEiH////kgvM1VkQWR5VkZ2NE9rT0pkWkJYaFR0N1A5UT1l3ABCcxKqAQgdEqUBChx3elc3b1hWUjVLZ3FvT2JUUDcwUzNEdU1ZZ0E9EiQwYmE3ZjcxOS0zZjJjLTQxM2YtYTlkMS04ZjZmZmQxZDEzNzAYACAAKAAw68qqsYUyONPQqrGFMkDT0KqxhTJKHGRjSnFtMnk2alNSVGw3Q2o2LzFCM29BZmliOD1aISIf///9QXg4aTNMeXR1M3JNZ1JXNnZSMnVvUXloZjc4PWXcAEJzEqoBCBwSpQEKHENpVHFKbUxlcmU4QXBidFdGczBPV1ZxQjIzST0SJDFlOWJiYzI3LTU2YzItNDM1MS1hMjg0LTgzZDBjNTBjNzhiNRgAIAAoADC70v7dhDI41dT+3YQyQNXU/t2EMkocamVIazdZM0dVMFpGb3p6VmNXcEdqcS9ObDI4PVohIh////t0b0svODJ6WW9FU3BQSFVpMWR1TnBxby9nMVE9ZQAAAAASqgEIGxKlAQocVnN5QVZuS3RNUnpQdXFGSEtQRTh0RFVKa01JPRIkNGE4ZWRmNzEtOTQ4NC00MjU5LWFlN2EtNmZkMWRmMWE4NmU3GAAgACgAMKXbuNCEMjj+3rjQhDJA/t640IQyShxjLzVLdlpMZTc2T0ZVcjhNbGlnN3hNSExUY0U9WiEiH///9kE4UFRQcThFSENGSkNHU2doYUhrUjBkcnRoYz1l82oRyRKqAQgaEqUBChxsSUtHQlZhQlhJSC8zUy9Pa3BPdWZGOWNOc2s9EiRlYTFmZmE2ZS1jODMyLTRlZmMtYjUyZS01NzVmNjIxYTRkOGMYACAAKAAw6ZiIg4UyOMy3weSDMkDMt8HkgzJKHHQwdE9lZUhmUTJzQnRzb2I3OXl5K2dvbFVEWT1aISIf///tK1ZyMTEvenlTTTZvTXQvb0h0Mk1pV0cvTVZrPWWxRIkIEqkBCBcSpAEKHDZaMjBiRGhPdFhoQldFWDZwRzlNUUFPbko0az0SJGFiYmFlNmY1LWVjMjgtNDE5Ny1hNjQ1LTdmMjIxYjg2N2Q3MhgAIAAoADCohtbigzI4n4jW4oMyQJ+I1uKDMkocRWlMY2Mwak9WSHVuODRCa1Q2OTQ3M1lxR2w4PVogIh7//2labEJzUXQ0VE1TMmlaNHNWL2djYUs5VFNPZz1lYWchNBKrAQgjEqYBChx1ZzlwWDNRanloc1hjMnRWNmlaZ0ExZ2Vremc9EiRhNTM3YTVlNi1hZDBkLTRhMjItOTY2ZC0xMzRmZmE1MzlkZWEYACAAKAAw8uLesoUyOOHk3rKFMkDh5N6yhTJKHEtGNCtsRVhVMEd4a2RwTm1TY3doUEZhV0x4bz1aIiIg////7VFiRkh1bzhsTHhMYWJwdHE1RmpKckF4eTdJRT1l/M4PUBKpAQgVEqQBChxmTTBveWc5a0ZYamJBejd4T3FITitxMDlLeW89EiQ0NzczNTg2Zi02MWI0LTRiMzQtYWE5ZS0yMWMxZGEzM2Y1ZmYYACAAKAAw4cjHsIIyOOrLxrCCMkDqy8awgjJKHCtKODBMeWdzN0lKY3dWWEFDZEc4cnRGQ3JXOD1aICIe//5MWE1ZRVdDbXVsVzVBcm5MYnQzSHpBRVoxT3M9ZQAAAAASqQEIFBKkAQocMXdxbENBb0diREEyWG1CTlpPNzVhUG1iRlU4PRIkZDFkMTM4NjItMDYyYi00NjFmLWIwZjEtYmFiNzA4NjM0NDNlGAAgACgAMLHPjsP+MTjW0I7D/jFA1tCOw/4xShxOU05vU1Vsekk0OERraEhGNjVGc1U3aWlTT3M9WiAiHv/9NzNrOHNXMko2RHNNZ3pkSnRtSi9vcUl0VmhBPWWIcmKWEqkBCBMSpAEKHFkyUkRZc3BGcG45MXZJWkdGSWVnZ3pKTDN1az0SJDg0N2JiYzc4LThiZmMtNDhlOS04NGExLWMxMGE2MmFlZWM3YRgAIAAoADCh6oTL8zE4ueuEy/MxQLnrhMvzMUocQ0t6RHBWd24xSi9SRVZ6c0I1bThVN3ozSlVnPVogIh7/+k5TbVJMUUZBd1lpdW1qemhWYnZqdUpBQ0xCOD1lBKLWBxKpAQgWEqQBChxtNlBFbmdldy8rQ2NRR2FkWlh5Rm45SWZsMFU9EiQ0NWVhZTAwMC1iOWE2LTQ4ZjktOTYwYi02Y2Q2MTE4ZmFlN2EYACAAKAAw0IrR4YIyOOuL0eGCMkDri9HhgjJKHHVXTTQyRUVJaElJT3pJMkNqQzhxWm5ySU1aZz1aICIe//9YUWxBU0NjbFhDSFZ0NElqUURpeitTamFWWkk9ZfvOJtASqgEIIBKlAQocbGZJV0YvYytWS1l5OTZ2Q2ZKdHpMbTh6QjVrPRIkMDI4OGRiYjgtYTllOS00MTJiLTllM2UtZjg5YzVhOTI5N2Q0GAAgACgAMMCewbKFMjihocGyhTJAoaHBsoUyShxSY1hOMXRYWG9ST2VxTEl5TTdJRWtITFd0cms9WiEiH////29CbGRKak9yc3lsejJtOVBzdnNUeE1zb0cwYz1le+x2URKpAQgREqQBChxTSmUzREVaQmNyMEU4czBuTWpGR0xaZVhtRUU9EiRhMzlmMTE5Zi1mODc0LTQ4MjktODdiNi1lZGZlODI3ZjQ5NGIYACAAKAAwppau4OcxOOiYruDnMUDomK7g5zFKHEtqVkNLV2w0TWM1aGxwN3hOOVpwZ0lQa2FiYz1aICIe/+paSzRoVklGNy9hTzlmc0VBZGR1Vi9UMm5qZms9ZUdUBFoSqAEIDBKjAQocakVHWk5zUmtDRGlab0FpMC8wS1N6YVFadWNzPRIkNjEwZmJmMmMtYjdhNy00ODlhLThhMWItOTRiOGZjOWRkZWFhGAAgACgAMP+90vLjMTjOx5L44DFAzseS+OAxShxoeGJXeWVSaW92MVhWejdPTnVTR3YrcC82KzA9Wh8iHftSb2FQYkluZDlXT2lleGZ0K3FlOElZM3lhY2c9ZZjHZbcSqAEICxKjAQocSXZKNS9kWnJSWEdtaitnQUJ4LzllOE5xcWVzPRIkNmFlMGI3YTgtZjk3YS00NzE1LWI2OTQtNmZlYTBjOGU3ZDllGAAgACgAMITKmdzKMTj/y5ncyjFA/8uZ3MoxShxtaUp2NndFbWN0LzMyMGRJamZZa3N4VzB6Rmc9Wh8iHfZQVW56Z1JXNU4xd0FMaEVvdExNRGRvemlvaFk9ZcqeO/wSqAEIChKjAQocTU9teXp0QTE1RXU2b3pZTVVlc0VOYmU2OWV3PRIkZTNlNmIxZjctMDBkYi00N2RjLWJhMDYtMmFiNzM1YWEzZGY0GAAgACgAMOqpm/yTMTiKsJv8kzFAirCb/JMxShxLSVJQMWlOdE1iZGQweGoxN3JvdHluNG5xM3M9Wh8iHdpZdThGWGlXdktVK2dSVWhJY2gwT05nWG5kK0U9ZQAAAAASpwEICRKiAQocQ1F2ZTIzRnNHTjBKU0M3WXZkNkd2K01ZUjVFPRIkMDJlNGM5Y2ItOWMzMy00ZGU3LTg1NmQtNGZiYmQ3ZGIxZmI4GAAgACgAMM2f0/LjMTizrpv8kzFAs66b/JMxShxxTzV2aWhsVlUyY21yL094OVJOMG1Yb3hHRUU9Wh4iHGlTd25UdnVKQWppc3NRNWhENlhZMklTN0J4ST1lpxzSGRKnAQgIEqIBChxqdVpKTE5oVDZPS1lRS0tvYnZ4OW9RNlhmdjA9EiQxMTU3NTlhMS03YzNmLTQ4ZTAtYjZiZS0xNTdlMTMyOTUwYWUYACAAKAAw6Kmb/JMxOMOvm/yTMUDDr5v8kzFKHDVkenppbTQ4WENzS3l3TkZ5ZWtaVnU2YmRIRT1aHiIcQjhEbHhnbytnRVp1NkNYUXlkZDNhcFNibFNVPWUAAAAAEokBCAEShAEKHHl4Si82ZnZrZWNyN2twNUVRekI0dFdMcGRiRT0SJGM2MTMwY2IyLTExM2ItNWM2Zi1hYWUxLTc5YjRiZGQzMjBmYRgAIAAoADD4vo2dhzE4+sGNnYcxQPrBjZ2HMUocYVJDV0xnaEY5YjVJbnFLSUR2dUovanZRa0ZjPVoAZQAAAAASqAEIDRKjAQocYnFuVmh1bEYvSThSSW1seDhwUldSQzhHYWVjPRIkOGFhM2I5YTktMGVmZC00MDU2LWJhNmQtN2IyOGYyZTkyZDc5GAAgACgAMPKH0fLjMTjQiNHy4zFA0IjR8uMxShx1Wk91Nkh3ai9nekloY0NhdkQrcHhMSytWVmM9Wh8iHf5XMEp2YmZ6bUdZdkpKb3NxUUgvVmwraTRVM1k9ZQAAAAASiQEIAhKEAQocWWNTVG9udkVTUHdxQ3M0TDJjclZodjY4TDk4PRIkNmUxYmM3MGQtN2FhOC01NDgxLWE4NzMtZjU2MGJhODMzOTdlGAAgACgAMPm+jZ2HMTiXwo2dhzFAl8KNnYcxShxvUFZraHdCUmJWNjVLQ1dSMitJT05IV29PdTg9WgBlAAAAABKnAQgHEqIBChxYdzZtMGNhLzNlVE8zNkYrbG5LRjFVZStLRTg9EiRjMTE0MDVkZi02NzcwLTRkMzktYjk2OS1hODVjMzRjM2Q0MWQYACAAKAAw6amb/JMxOOGvm/yTMUDhr5v8kzFKHEUyTldUUFMxZmlYQk1WZVUzQjVVKys0ZmJ3VT1aHiIcdDQydDA4VDVKZmpqQmVwbFdCcGtSUTJJMEFrPWUAAAAAEqsBCCESpgEKHFB4RUEzbWJqY1p3VU5iaW94c1JFaFpSYm0wUT0SJGRlOWFmYTgwLThiMTUtNGYwZC1hYzFhLWZkMzhiY2RhMmE5YxgAIAAoADChsYHbhTI40f7BsoUyQNH+wbKFMkocaG1qQktzaTh4aWlrWFliZUtwTnNPZG1mN1RBPVoiIiD///+3TzV3NmhkM3NGL294dHIxUUVMb3VUaGhOMXM4PWX8zg9QEqoBCBgSpQEKHGlPR1lHaFVra0F6OU02RUQ5Q0tJWDFsVEtHcz0SJGEwNmNjMzMyLWNlYmQtNDVkNS1hYjVlLTU4YjQxZWNjMWRkMhgAIAAoADCZn4jxhjI4s6XW4oMyQLOl1uKDMkocUExEMXJEeU43QVRnS0gvZllYY2FCcW1wUzB3PVohIh///7Q0UWEyUnpVdWZpWXlIcHhJaW15c0RzVmxGRVE9Zfm6IzgSqAEIDhKjAQocVTVXWmlQY1VlWXRMVDJuNFJBcytOMGdtcEprPRIkYzlkZjI3NDctNTg0Zi00ZjM5LTlhYTYtZmJlZTUwZTFiZjkwGAAgACgAMNKVl7LmMTjbl5ey5jFA25eXsuYxShxwVkcrZkRVWjZtbmR2TmdOeGo3M0tNYk56RDA9Wh8iHf9WU2s0SWl5WW9ISGJvYzJMSXk2aVdwQWNMZHc9ZfvOJtASqQEIDxKkAQocRzJNOElyNDJIQkVhSzA1ZlNRa1FiM2xCM3A0PRIkNjlkZWM4NDAtYjAyZC00ZGViLThmZmUtZTk2MGI4Mjc0ZjdjGAAgACgAMIXG9d3nMTilyfXd5zFApcn13ecxShx5aVdFQ251WHJZdTFwU21aeGxDRUlGQ1FHc1U9WiAiHv+rSXhlN09Ha2ROdHEwQnN6ODJhSWhUaEprSzJFPWX7zibQEqoBCBkSpQEKHEpYMUlNWTlVb0gzbmhyTnN5RkZPTVhNamhzTT0SJGQyMjdjZmYxLWJmNzctNDc0ZS1iZTJhLTJhN2U3NjJhNjc2MhgAIAAoADCPgqqUijI46eC05IMyQOngtOSDMkocN2xjWTVDbUd0cGt4c1d2emUwOTF1QkV0Z29zPVohIh///9pKY1gza3VnZTJmcG9aVHpXblBFc1VjNjMvUFk9ZSjoN64SqQEIEhKkAQocbTBMT2J5WjRvVnNvdTBWQnREa2h1dFNRTE1nPRIkMGU4M2VjYzUtZDA3Ni00MGQ0LWEwNTUtMWZiNDcxMWUzNDhiGAAgACgAMP+o6YHxMTiGrumB8TFAhq7pgfExShwwdXFra0VMT09XZ1ZLM2xVcWNSUG1SSW1zUkk9WiAiHv/1bzRYYU95Y1g3YUF4Rk85M002NnFuM1hRbXkwPWUAAAAAEqkBCBASpAEKHCttMGdCc2Z5cjF5YVBRMFBiZjV4SE9FdTFjYz0SJDQzYTljYTQ1LTZjZjAtNGIzMy1hMWM4LWFlYzUyYzFkOGJmZRgAIAAoADDK4anf5zE4vuSp3+cxQL7kqd/nMUocTlJPalBLY2k4MVppSTA4SElIOXFld0xBcE5nPVogIh7/1TVxSGZXQTU3endiVEpzNFJ5QkJPTkllQ3I1bz1lR1QEWhKJAQgDEoQBChxuamdEdTg4ZUNydlhwODZwRDdmSEdjcUZwODg9EiQ5NDYwYjcwMi00NjRhLTU1ZmYtYTQwZC1kYWUzOGZkM2I3YTcYACAAKAAw/r6NnYcxONvDjZ2HMUDbw42dhzFKHHl6TkIwMWNuNTRBN2NSVTB1VCsvUGdtVHRVbz1aAGUAAAAAMAA4AA==",
+   "version": 1
+}

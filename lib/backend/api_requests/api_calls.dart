@@ -6,7 +6,7 @@ import 'api_manager.dart';
 
 export 'api_manager.dart' show ApiCallResponse;
 
-const _kPrivateApiFunctionName = 'ffPrivateApiCall';
+// const _kPrivateApiFunctionName = 'ffPrivateApiCall';
 
 class InserirEmMassaCall {
   static Future<ApiCallResponse> call({
@@ -380,7 +380,7 @@ String _toEncodable(dynamic item) {
   return item;
 }
 
-String _serializeList(List? list) {
+/*String _serializeList(List? list) {
   list ??= <String>[];
   try {
     return json.encode(list, toEncodable: _toEncodable);
@@ -390,7 +390,7 @@ String _serializeList(List? list) {
     }
     return '[]';
   }
-}
+}*/
 
 String _serializeJson(dynamic jsonVar, [bool isList = false]) {
   jsonVar ??= (isList ? [] : {});

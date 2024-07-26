@@ -20,99 +20,118 @@ class FFAppState extends ChangeNotifier {
     notifyListeners();
   }
 
-  String _OS = '';
-  String get OS => _OS;
-  set OS(String value) {
-    _OS = value;
-  }
-
-  String _Projeto = '';
-  String get Projeto => _Projeto;
-  set Projeto(String value) {
-    _Projeto = value;
-  }
-
-  String _Ocorrencia = '';
-  String get Ocorrencia => _Ocorrencia;
-  set Ocorrencia(String value) {
-    _Ocorrencia = value;
-  }
-
-  String _Tipo = '';
-  String get Tipo => _Tipo;
-  set Tipo(String value) {
-    _Tipo = value;
-  }
-
+  // Campos privados
+  String _os = '';
+  String _projeto = '';
+  String _ocorrencia = '';
+  String _tipo = '';
   double _currentLat = 0.0;
+  double _currentLng = 0.0;
+  bool _isFirstDropdownSelected = false;
+  bool _isSecondDropdownSelected = false;
+  String _description = '';
+  bool _userExists = false;
+  String _telefone = '';
+  String _nome = '';
+  String _email = '';
+  String _cpf = '';
+  String _unidade = '';
+  String _uid = '';
+
+  // Acesso direto aos campos privados
+  String get os => _os;
+  set os(String value) {
+    _os = value;
+    notifyListeners();
+  }
+
+  String get projeto => _projeto;
+  set projeto(String value) {
+    _projeto = value;
+    notifyListeners();
+  }
+
+  String get ocorrencia => _ocorrencia;
+  set ocorrencia(String value) {
+    _ocorrencia = value;
+    notifyListeners();
+  }
+
+  String get tipo => _tipo;
+  set tipo(String value) {
+    _tipo = value;
+    notifyListeners();
+  }
+
   double get currentLat => _currentLat;
   set currentLat(double value) {
     _currentLat = value;
+    notifyListeners();
   }
 
-  double _currentLng = 0.0;
   double get currentLng => _currentLng;
   set currentLng(double value) {
     _currentLng = value;
+    notifyListeners();
   }
 
-  bool _isFirstDropdownSelected = false;
   bool get isFirstDropdownSelected => _isFirstDropdownSelected;
   set isFirstDropdownSelected(bool value) {
     _isFirstDropdownSelected = value;
+    notifyListeners();
   }
 
-  bool _isSecondDropdownSelected = false;
   bool get isSecondDropdownSelected => _isSecondDropdownSelected;
   set isSecondDropdownSelected(bool value) {
     _isSecondDropdownSelected = value;
+    notifyListeners();
   }
 
-  String _Descriptiom = '';
-  String get Descriptiom => _Descriptiom;
-  set Descriptiom(String value) {
-    _Descriptiom = value;
+  String get description => _description;
+  set description(String value) {
+    _description = value;
+    notifyListeners();
   }
 
-  bool _userExists = false;
   bool get userExists => _userExists;
   set userExists(bool value) {
     _userExists = value;
+    notifyListeners();
   }
 
-  String _Telefone = '';
-  String get Telefone => _Telefone;
-  set Telefone(String value) {
-    _Telefone = value;
+  String get telefone => _telefone;
+  set telefone(String value) {
+    _telefone = value;
+    notifyListeners();
   }
 
-  String _Nome = '';
-  String get Nome => _Nome;
-  set Nome(String value) {
-    _Nome = value;
+  String get nome => _nome;
+  set nome(String value) {
+    _nome = value;
+    notifyListeners();
   }
 
-  String _Email = '';
-  String get Email => _Email;
-  set Email(String value) {
-    _Email = value;
+  String get email => _email;
+  set email(String value) {
+    _email = value;
+    notifyListeners();
   }
 
-  String _CPF = '';
-  String get CPF => _CPF;
-  set CPF(String value) {
-    _CPF = value;
+  String get cpf => _cpf;
+  set cpf(String value) {
+    _cpf = value;
+    notifyListeners();
   }
 
-  String _Unidade = '';
-  String get Unidade => _Unidade;
-  set Unidade(String value) {
-    _Unidade = value;
+  String get unidade => _unidade;
+  set unidade(String value) {
+    _unidade = value;
+    notifyListeners();
   }
 
-  String _uid = '';
   String get uid => _uid;
   set uid(String value) {
     _uid = value;
+    notifyListeners();
   }
 }

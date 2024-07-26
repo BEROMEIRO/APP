@@ -233,13 +233,14 @@ class _CriarUserWidgetState extends State<CriarUserWidget>
                                             alignment: const Alignment(0.0, 0),
                                             child: TabBar(
                                               isScrollable: true,
-                                              labelColor: const Color(0xFF101213),
+                                              labelColor:
+                                                  const Color(0xFF101213),
                                               unselectedLabelColor:
                                                   const Color(0xFF57636C),
                                               labelPadding:
                                                   const EdgeInsetsDirectional
                                                       .fromSTEB(
-                                                          32.0, 0.0, 32.0, 0.0),
+                                                      32.0, 0.0, 32.0, 0.0),
                                               labelStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .titleLarge
@@ -285,7 +286,7 @@ class _CriarUserWidgetState extends State<CriarUserWidget>
                                                     padding:
                                                         const EdgeInsetsDirectional
                                                             .fromSTEB(12.0, 5.0,
-                                                                12.0, 0.0),
+                                                            12.0, 0.0),
                                                     child:
                                                         SingleChildScrollView(
                                                       child: Column(
@@ -302,10 +303,10 @@ class _CriarUserWidgetState extends State<CriarUserWidget>
                                                             padding:
                                                                 const EdgeInsetsDirectional
                                                                     .fromSTEB(
-                                                                        5.0,
-                                                                        0.0,
-                                                                        5.0,
-                                                                        15.0),
+                                                                    5.0,
+                                                                    0.0,
+                                                                    5.0,
+                                                                    15.0),
                                                             child: Text(
                                                               '\nVamos começar preenchendo o formulário abaixo.',
                                                               textAlign:
@@ -333,10 +334,10 @@ class _CriarUserWidgetState extends State<CriarUserWidget>
                                                             padding:
                                                                 const EdgeInsetsDirectional
                                                                     .fromSTEB(
-                                                                        0.0,
-                                                                        0.0,
-                                                                        0.0,
-                                                                        8.0),
+                                                                    0.0,
+                                                                    0.0,
+                                                                    0.0,
+                                                                    8.0),
                                                             child: SizedBox(
                                                               width: double
                                                                   .infinity,
@@ -446,7 +447,7 @@ class _CriarUserWidgetState extends State<CriarUserWidget>
                                                                   contentPadding:
                                                                       const EdgeInsets
                                                                           .all(
-                                                                              24.0),
+                                                                          24.0),
                                                                   suffixIcon: _model
                                                                           .telefoneTxtFieldTextController!
                                                                           .text
@@ -495,10 +496,10 @@ class _CriarUserWidgetState extends State<CriarUserWidget>
                                                             padding:
                                                                 const EdgeInsetsDirectional
                                                                     .fromSTEB(
-                                                                        0.0,
-                                                                        0.0,
-                                                                        0.0,
-                                                                        8.0),
+                                                                    0.0,
+                                                                    0.0,
+                                                                    0.0,
+                                                                    8.0),
                                                             child: SizedBox(
                                                               width: double
                                                                   .infinity,
@@ -609,7 +610,7 @@ class _CriarUserWidgetState extends State<CriarUserWidget>
                                                                   contentPadding:
                                                                       const EdgeInsets
                                                                           .all(
-                                                                              24.0),
+                                                                          24.0),
                                                                   suffixIcon: _model
                                                                           .nomeTxtFieldTextController!
                                                                           .text
@@ -658,10 +659,10 @@ class _CriarUserWidgetState extends State<CriarUserWidget>
                                                             padding:
                                                                 const EdgeInsetsDirectional
                                                                     .fromSTEB(
-                                                                        0.0,
-                                                                        0.0,
-                                                                        0.0,
-                                                                        8.0),
+                                                                    0.0,
+                                                                    0.0,
+                                                                    0.0,
+                                                                    8.0),
                                                             child: SizedBox(
                                                               width: double
                                                                   .infinity,
@@ -768,7 +769,7 @@ class _CriarUserWidgetState extends State<CriarUserWidget>
                                                                   contentPadding:
                                                                       const EdgeInsets
                                                                           .all(
-                                                                              24.0),
+                                                                          24.0),
                                                                   suffixIcon: _model
                                                                           .emailTxtfieldTextController!
                                                                           .text
@@ -820,10 +821,10 @@ class _CriarUserWidgetState extends State<CriarUserWidget>
                                                             padding:
                                                                 const EdgeInsetsDirectional
                                                                     .fromSTEB(
-                                                                        0.0,
-                                                                        0.0,
-                                                                        0.0,
-                                                                        8.0),
+                                                                    0.0,
+                                                                    0.0,
+                                                                    0.0,
+                                                                    8.0),
                                                             child: SizedBox(
                                                               width: double
                                                                   .infinity,
@@ -934,7 +935,7 @@ class _CriarUserWidgetState extends State<CriarUserWidget>
                                                                   contentPadding:
                                                                       const EdgeInsets
                                                                           .all(
-                                                                              24.0),
+                                                                          24.0),
                                                                   suffixIcon: _model
                                                                           .cPFTxtFieldTextController!
                                                                           .text
@@ -983,10 +984,10 @@ class _CriarUserWidgetState extends State<CriarUserWidget>
                                                             padding:
                                                                 const EdgeInsetsDirectional
                                                                     .fromSTEB(
-                                                                        0.0,
-                                                                        0.0,
-                                                                        0.0,
-                                                                        8.0),
+                                                                    0.0,
+                                                                    0.0,
+                                                                    0.0,
+                                                                    8.0),
                                                             child: SizedBox(
                                                               width: double
                                                                   .infinity,
@@ -1097,7 +1098,7 @@ class _CriarUserWidgetState extends State<CriarUserWidget>
                                                                   contentPadding:
                                                                       const EdgeInsets
                                                                           .all(
-                                                                              24.0),
+                                                                          24.0),
                                                                   suffixIcon: _model
                                                                           .unidadeTxtFieldTextController!
                                                                           .text
@@ -1146,10 +1147,10 @@ class _CriarUserWidgetState extends State<CriarUserWidget>
                                                             padding:
                                                                 const EdgeInsetsDirectional
                                                                     .fromSTEB(
-                                                                        0.0,
-                                                                        0.0,
-                                                                        0.0,
-                                                                        8.0),
+                                                                    0.0,
+                                                                    0.0,
+                                                                    0.0,
+                                                                    8.0),
                                                             child: SizedBox(
                                                               width: double
                                                                   .infinity,
@@ -1244,7 +1245,7 @@ class _CriarUserWidgetState extends State<CriarUserWidget>
                                                                   contentPadding:
                                                                       const EdgeInsets
                                                                           .all(
-                                                                              24.0),
+                                                                          24.0),
                                                                   suffixIcon:
                                                                       InkWell(
                                                                     onTap: () =>
@@ -1292,9 +1293,14 @@ class _CriarUserWidgetState extends State<CriarUserWidget>
                                                           FFButtonWidget(
                                                             onPressed:
                                                                 () async {
+                                                              final context = this
+                                                                  .context; // Captura o BuildContext
+
                                                               GoRouter.of(
                                                                       context)
                                                                   .prepareAuthEvent();
+
+                                                              // Verifique a correspondência da senha antes da operação assíncrona
                                                               if (_model
                                                                       .codigoTxtFieldTextController
                                                                       .text !=
@@ -1305,15 +1311,14 @@ class _CriarUserWidgetState extends State<CriarUserWidget>
                                                                         context)
                                                                     .showSnackBar(
                                                                   const SnackBar(
-                                                                    content:
-                                                                        Text(
-                                                                      'Passwords don\'t match!',
-                                                                    ),
+                                                                    content: Text(
+                                                                        'Passwords don\'t match!'),
                                                                   ),
                                                                 );
                                                                 return;
                                                               }
 
+                                                              // Realize a operação assíncrona
                                                               final user =
                                                                   await authManager
                                                                       .createAccountWithEmail(
@@ -1325,6 +1330,7 @@ class _CriarUserWidgetState extends State<CriarUserWidget>
                                                                     .codigoTxtFieldTextController
                                                                     .text,
                                                               );
+
                                                               if (user ==
                                                                   null) {
                                                                 return;
@@ -1334,78 +1340,84 @@ class _CriarUserWidgetState extends State<CriarUserWidget>
                                                                   .collection
                                                                   .doc()
                                                                   .set(
-                                                                      createUsersRecordData(
-                                                                    email:
-                                                                        currentUserEmail,
-                                                                    displayName:
-                                                                        _model
-                                                                            .nomeTxtFieldTextController
-                                                                            .text,
-                                                                    createdTime:
-                                                                        getCurrentTimestamp,
-                                                                    phoneNumber:
-                                                                        _model
-                                                                            .telefoneTxtFieldTextController
-                                                                            .text,
-                                                                    cpf: _model
-                                                                        .cPFTxtFieldTextController
-                                                                        .text,
-                                                                    unidade: _model
-                                                                        .unidadeTxtFieldTextController
-                                                                        .text,
-                                                                    uid:
-                                                                        currentUserUid,
-                                                                  ));
-                                                              ScaffoldMessenger
-                                                                      .of(context)
-                                                                  .showSnackBar(
-                                                                SnackBar(
-                                                                  content: Text(
-                                                                    'Usuário criado com sucesso',
-                                                                    style:
-                                                                        TextStyle(
-                                                                      color: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .primaryText,
+                                                                    createUsersRecordData(
+                                                                      email:
+                                                                          currentUserEmail,
+                                                                      displayName: _model
+                                                                          .nomeTxtFieldTextController
+                                                                          .text,
+                                                                      createdTime:
+                                                                          getCurrentTimestamp,
+                                                                      phoneNumber: _model
+                                                                          .telefoneTxtFieldTextController
+                                                                          .text,
+                                                                      cpf: _model
+                                                                          .cPFTxtFieldTextController
+                                                                          .text,
+                                                                      unidade: _model
+                                                                          .unidadeTxtFieldTextController
+                                                                          .text,
+                                                                      uid:
+                                                                          currentUserUid,
                                                                     ),
-                                                                  ),
-                                                                  duration: const Duration(
-                                                                      milliseconds:
-                                                                          4000),
-                                                                  backgroundColor:
-                                                                      FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .secondary,
-                                                                ),
-                                                              );
-
-                                                              context.goNamedAuth(
-                                                                  'Home',
-                                                                  context
-                                                                      .mounted);
-
-                                                              await showDialog(
-                                                                context:
-                                                                    context,
-                                                                builder:
-                                                                    (alertDialogContext) {
-                                                                  return AlertDialog(
-                                                                    title: const Text(
-                                                                        'Bem Vindo(a)!'),
-                                                                    content: Text(
-                                                                        currentUserDisplayName),
-                                                                    actions: [
-                                                                      TextButton(
-                                                                        onPressed:
-                                                                            () =>
-                                                                                Navigator.pop(alertDialogContext),
-                                                                        child: const Text(
-                                                                            'Ok'),
-                                                                      ),
-                                                                    ],
                                                                   );
-                                                                },
-                                                              );
+
+                                                              // Usar WidgetsBinding para atrasar a execução do código que usa o BuildContext
+                                                              WidgetsBinding
+                                                                  .instance
+                                                                  .addPostFrameCallback(
+                                                                      (_) {
+                                                                if (mounted) {
+                                                                  ScaffoldMessenger.of(
+                                                                          context)
+                                                                      .showSnackBar(
+                                                                    SnackBar(
+                                                                      content:
+                                                                          Text(
+                                                                        'Usuário criado com sucesso',
+                                                                        style:
+                                                                            TextStyle(
+                                                                          color:
+                                                                              FlutterFlowTheme.of(context).primaryText,
+                                                                        ),
+                                                                      ),
+                                                                      duration: const Duration(
+                                                                          milliseconds:
+                                                                              4000),
+                                                                      backgroundColor:
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .secondary,
+                                                                    ),
+                                                                  );
+
+                                                                  context.goNamedAuth(
+                                                                      'Home',
+                                                                      context
+                                                                          .mounted);
+
+                                                                  showDialog(
+                                                                    context:
+                                                                        context,
+                                                                    builder:
+                                                                        (alertDialogContext) {
+                                                                      return AlertDialog(
+                                                                        title: const Text(
+                                                                            'Bem Vindo(a)!'),
+                                                                        content:
+                                                                            Text(currentUserDisplayName),
+                                                                        actions: [
+                                                                          TextButton(
+                                                                            onPressed: () =>
+                                                                                Navigator.pop(alertDialogContext),
+                                                                            child:
+                                                                                const Text('Ok'),
+                                                                          ),
+                                                                        ],
+                                                                      );
+                                                                    },
+                                                                  );
+                                                                }
+                                                              });
                                                             },
                                                             text: 'Entrar',
                                                             options:
@@ -1415,17 +1427,17 @@ class _CriarUserWidgetState extends State<CriarUserWidget>
                                                               padding:
                                                                   const EdgeInsetsDirectional
                                                                       .fromSTEB(
-                                                                          24.0,
-                                                                          0.0,
-                                                                          24.0,
-                                                                          0.0),
+                                                                      24.0,
+                                                                      0.0,
+                                                                      24.0,
+                                                                      0.0),
                                                               iconPadding:
                                                                   const EdgeInsetsDirectional
                                                                       .fromSTEB(
-                                                                          0.0,
-                                                                          0.0,
-                                                                          0.0,
-                                                                          0.0),
+                                                                      0.0,
+                                                                      0.0,
+                                                                      0.0,
+                                                                      0.0),
                                                               color: const Color(
                                                                   0xE91881F6),
                                                               textStyle:

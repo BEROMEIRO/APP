@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
-
+//import 'package:latlong2/latlong.dart';  // Adicione a importação para LatLng
 import 'database.dart';
 
 abstract class SupabaseDataRow {
@@ -43,16 +43,14 @@ dynamic supaSerialize<T>(T? value) {
     return null;
   }
 
-  switch (T) {
-    case DateTime:
-      return (value as DateTime).toIso8601String();
-    case PostgresTime:
-      return (value as PostgresTime).toIso8601String();
-    case LatLng:
-      final latLng = (value as LatLng);
-      return {'lat': latLng.latitude, 'lng': latLng.longitude};
-    default:
-      return value;
+  if (value is DateTime) {
+    return value.toIso8601String();
+  } else if (value is PostgresTime) {
+    return value.toIso8601String();
+  } else if (value is LatLng) {
+    return {'lat': value.latitude, 'lng': value.longitude};
+  } else {
+    return value;
   }
 }
 
@@ -64,24 +62,23 @@ T? _supaDeserialize<T>(dynamic value) {
     return null;
   }
 
-  switch (T) {
-    case int:
-      return (value as num).round() as T?;
-    case double:
-      return (value as num).toDouble() as T?;
-    case DateTime:
-      return DateTime.tryParse(value as String)?.toLocal() as T?;
-    case PostgresTime:
-      return PostgresTime.tryParse(value as String) as T?;
-    case LatLng:
-      final latLng = value is Map ? value : json.decode(value) as Map;
-      final lat = latLng['lat'] ?? latLng['latitude'];
-      final lng = latLng['lng'] ?? latLng['longitude'];
-      return lat is num && lng is num
-          ? LatLng(lat.toDouble(), lng.toDouble()) as T?
-          : null;
-    default:
-      return value as T;
+  if (T == int) {
+    return (value as num).round() as T?;
+  } else if (T == double) {
+    return (value as num).toDouble() as T?;
+  } else if (T == DateTime) {
+    return DateTime.tryParse(value as String)?.toLocal() as T?;
+  } else if (T == PostgresTime) {
+    return PostgresTime.tryParse(value as String) as T?;
+  } else if (T == LatLng) {
+    final latLng = value is Map ? value : json.decode(value) as Map;
+    final lat = latLng['lat'] ?? latLng['latitude'];
+    final lng = latLng['lng'] ?? latLng['longitude'];
+    return lat is num && lng is num
+        ? LatLng(lat.toDouble(), lng.toDouble()) as T?
+        : null;
+  } else {
+    return value as T;
   }
 }
 

@@ -1,8 +1,8 @@
 import 'dart:async';
-
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:logger/logger.dart'; // Adicione esta linha
 import '../auth_manager.dart';
 
 import 'anonymous_auth.dart';
@@ -18,11 +18,8 @@ export '../base_auth_user_provider.dart';
 class FirebasePhoneAuthManager extends ChangeNotifier {
   bool? _triggerOnCodeSent;
   FirebaseAuthException? phoneAuthError;
-  // Set when using phone verification (after phone number is provided).
   String? phoneAuthVerificationCode;
-  // Set when using phone sign in in web mode (ignored otherwise).
   ConfirmationResult? webPhoneAuthConfirmationResult;
-  // Used for handling verification codes for phone sign in.
   void Function(BuildContext)? _onCodeSent;
 
   bool get triggerOnCodeSent => _triggerOnCodeSent ?? false;
@@ -47,11 +44,8 @@ class FirebaseAuthManager extends AuthManager
         JwtSignInManager,
         GithubSignInManager,
         PhoneSignInManager {
-  // Set when using phone verification (after phone number is provided).
-  String? _phoneAuthVerificationCode;
-  // Set when using phone sign in in web mode (ignored otherwise).
-  ConfirmationResult? _webPhoneAuthConfirmationResult;
   FirebasePhoneAuthManager phoneAuthManager = FirebasePhoneAuthManager();
+  final Logger _logger = Logger(); // Adicione esta linha
 
   @override
   Future signOut() {
@@ -62,18 +56,21 @@ class FirebaseAuthManager extends AuthManager
   Future deleteUser(BuildContext context) async {
     try {
       if (!loggedIn) {
-        print('Error: delete user attempted with no logged in user!');
+        _logger.e(
+            'Error: delete user attempted with no logged in user!'); // Atualize para usar o logger
         return;
       }
       await currentUser?.delete();
     } on FirebaseAuthException catch (e) {
       if (e.code == 'requires-recent-login') {
-        ScaffoldMessenger.of(context).hideCurrentSnackBar();
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-              content: Text(
-                  'Too long since most recent sign in. Sign in again before deleting your account.')),
-        );
+        if (context.mounted) {
+          ScaffoldMessenger.of(context).hideCurrentSnackBar();
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+                content: Text(
+                    'Too long since most recent sign in. Sign in again before deleting your account.')),
+          );
+        }
       }
     }
   }
@@ -85,18 +82,21 @@ class FirebaseAuthManager extends AuthManager
   }) async {
     try {
       if (!loggedIn) {
-        print('Error: update email attempted with no logged in user!');
+        _logger.e(
+            'Error: update email attempted with no logged in user!'); // Atualize para usar o logger
         return;
       }
       await currentUser?.updateEmail(email);
     } on FirebaseAuthException catch (e) {
       if (e.code == 'requires-recent-login') {
-        ScaffoldMessenger.of(context).hideCurrentSnackBar();
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-              content: Text(
-                  'Too long since most recent sign in. Sign in again before updating your email.')),
-        );
+        if (context.mounted) {
+          ScaffoldMessenger.of(context).hideCurrentSnackBar();
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+                content: Text(
+                    'Too long since most recent sign in. Sign in again before updating your email.')),
+          );
+        }
       }
     }
   }
@@ -109,15 +109,19 @@ class FirebaseAuthManager extends AuthManager
     try {
       await FirebaseAuth.instance.sendPasswordResetEmail(email: email);
     } on FirebaseAuthException catch (e) {
-      ScaffoldMessenger.of(context).hideCurrentSnackBar();
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Error: ${e.message!}')),
-      );
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).hideCurrentSnackBar();
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Error: ${e.message!}')),
+        );
+      }
       return null;
     }
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Password reset email sent')),
-    );
+    if (context.mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Password reset email sent')),
+      );
+    }
   }
 
   @override
@@ -181,9 +185,11 @@ class FirebaseAuthManager extends AuthManager
             .update(() => phoneAuthManager.triggerOnCodeSent = false);
       } else if (phoneAuthManager.phoneAuthError != null) {
         final e = phoneAuthManager.phoneAuthError!;
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-          content: Text('Error: ${e.message!}'),
-        ));
+        if (context.mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            content: Text('Error: ${e.message!}'),
+          ));
+        }
         phoneAuthManager.update(() => phoneAuthManager.phoneAuthError = null);
       }
     });
@@ -203,28 +209,16 @@ class FirebaseAuthManager extends AuthManager
       return;
     }
     final completer = Completer<bool>();
-    // If you'd like auto-verification, without the user having to enter the SMS
-    // code manually. Follow these instructions:
-    // * For Android: https://firebase.google.com/docs/auth/android/phone-auth?authuser=0#enable-app-verification (SafetyNet set up)
-    // * For iOS: https://firebase.google.com/docs/auth/ios/phone-auth?authuser=0#start-receiving-silent-notifications
-    // * Finally modify verificationCompleted below as instructed.
     await FirebaseAuth.instance.verifyPhoneNumber(
       phoneNumber: phoneNumber,
-      timeout:
-          const Duration(seconds: 0), // Skips Android's default auto-verification
+      timeout: const Duration(
+          seconds: 0), // Skips Android's default auto-verification
       verificationCompleted: (phoneAuthCredential) async {
         await FirebaseAuth.instance.signInWithCredential(phoneAuthCredential);
         phoneAuthManager.update(() {
           phoneAuthManager.triggerOnCodeSent = false;
           phoneAuthManager.phoneAuthError = null;
         });
-        // If you've implemented auto-verification, navigate to home page or
-        // onboarding page here manually. Uncomment the lines below and replace
-        // DestinationPage() with the desired widget.
-        // await Navigator.push(
-        //   context,
-        //   MaterialPageRoute(builder: (_) => DestinationPage()),
-        // );
       },
       verificationFailed: (e) {
         phoneAuthManager.update(() {
@@ -271,8 +265,6 @@ class FirebaseAuthManager extends AuthManager
     }
   }
 
-  /// Tries to sign in or create an account using Firebase Auth.
-  /// Returns the User object if sign in was successful.
   Future<BaseAuthUser?> _signInOrCreateAccount(
     BuildContext context,
     Future<UserCredential?> Function() signInFunc,
@@ -291,10 +283,12 @@ class FirebaseAuthManager extends AuthManager
           'Error: The supplied auth credential is incorrect, malformed or has expired',
         _ => 'Error: ${e.message!}',
       };
-      ScaffoldMessenger.of(context).hideCurrentSnackBar();
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(errorMsg)),
-      );
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).hideCurrentSnackBar();
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(errorMsg)),
+        );
+      }
       return null;
     }
   }

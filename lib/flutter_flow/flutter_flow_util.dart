@@ -17,6 +17,8 @@ import '../main.dart';
 
 import 'lat_lng.dart';
 
+import 'package:logging/logging.dart';
+
 export 'keep_alive_wrapper.dart';
 export 'lat_lng.dart';
 export 'place.dart';
@@ -158,19 +160,12 @@ T? castToType<T>(dynamic value) {
   if (value == null) {
     return null;
   }
-  switch (T) {
-    case double:
-      // Doubles may be stored as ints in some cases.
-      return value.toDouble() as T;
-    case int:
-      // Likewise, ints may be stored as doubles. If this is the case
-      // (i.e. no decimal value), return the value as an int.
-      if (value is num && value.toInt() == value) {
-        return value.toInt() as T;
-      }
-      break;
-    default:
-      break;
+  if (T == double) {
+    return value.toDouble() as T;
+  } else if (T == int) {
+    if (value is num && value.toInt() == value) {
+      return value.toInt() as T;
+    }
   }
   return value as T;
 }
@@ -240,7 +235,10 @@ const kTextValidatorEmailRegex =
 const kTextValidatorWebsiteRegex =
     r'(https?:\/\/)?(www\.)[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,10}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)|(https?:\/\/)?(www\.)?(?!ww)[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,10}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)';
 
+final Logger _logger = Logger('UserLocationLogger');
+
 LatLng? cachedUserLocation;
+
 Future<LatLng> getCurrentUserLocation(
     {required LatLng defaultLocation, bool cached = false}) async {
   if (cached && cachedUserLocation != null) {
@@ -252,7 +250,7 @@ Future<LatLng> getCurrentUserLocation(
     }
     return loc ?? defaultLocation;
   }).onError((error, _) {
-    print("Error querying user location: $error");
+    _logger.severe("Error querying user location: $error");
     return defaultLocation;
   });
 }

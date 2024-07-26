@@ -26,9 +26,12 @@ class AppctbV2FirebaseUser extends BaseAuthUser {
   @override
   Future? updateEmail(String email) async {
     try {
-      await user?.updateEmail(email);
-    } catch (_) {
       await user?.verifyBeforeUpdateEmail(email);
+      // Send verification email to the new email address
+      await user?.sendEmailVerification();
+    } catch (e) {
+      // Handle errors appropriately
+      rethrow;
     }
   }
 

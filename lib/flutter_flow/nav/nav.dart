@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-
 import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
@@ -78,8 +77,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) =>
-              appStateNotifier.loggedIn ? const HomeWidget() : const LoginWidget(),
+          builder: (context, _) => appStateNotifier.loggedIn
+              ? const HomeWidget()
+              : const LoginWidget(),
         ),
         FFRoute(
           name: 'Criar_User',
@@ -97,39 +97,39 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => OsWidget(
             parOS: params.getParam(
               'parOS',
-              ParamType.String,
+              ParamType.string,
             ),
             parData: params.getParam(
               'parData',
-              ParamType.DateTime,
+              ParamType.dateTime,
             ),
             parStatus: params.getParam(
               'parStatus',
-              ParamType.String,
+              ParamType.string,
             ),
             parOcorrencia: params.getParam(
               'parOcorrencia',
-              ParamType.String,
+              ParamType.string,
             ),
             parNrAtendimento: params.getParam(
               'parNrAtendimento',
-              ParamType.String,
+              ParamType.string,
             ),
             parObs: params.getParam(
               'parObs',
-              ParamType.String,
+              ParamType.string,
             ),
             parAtendente: params.getParam(
               'parAtendente',
-              ParamType.String,
+              ParamType.string,
             ),
             parProjeto: params.getParam(
               'parProjeto',
-              ParamType.String,
+              ParamType.string,
             ),
             parTipo: params.getParam(
               'parTipo',
-              ParamType.String,
+              ParamType.string,
             ),
           ),
         ),
@@ -139,7 +139,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => NovoChamadoWidget(
             osNumber: params.getParam(
               'osNumber',
-              ParamType.String,
+              ParamType.string,
             ),
           ),
         ),
@@ -149,23 +149,23 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => ReaberturaWidget(
             osNumber: params.getParam(
               'osNumber',
-              ParamType.String,
+              ParamType.string,
             ),
             project: params.getParam(
               'project',
-              ParamType.String,
+              ParamType.string,
             ),
             oco: params.getParam(
               'oco',
-              ParamType.String,
+              ParamType.string,
             ),
             type: params.getParam(
               'type',
-              ParamType.String,
+              ParamType.string,
             ),
             description: params.getParam(
               'description',
-              ParamType.String,
+              ParamType.string,
             ),
           ),
         ),
@@ -410,7 +410,8 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() =>
+      const TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {

@@ -100,13 +100,15 @@ class _ReaberturaWidgetState extends State<ReaberturaWidget> {
           actions: [
             FFButtonWidget(
               onPressed: () {
-                print('Button pressed ...');
+                //print('Button pressed ...');
               },
               text: 'Salvar',
               options: FFButtonOptions(
                 height: 40.0,
-                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                padding:
+                    const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                iconPadding:
+                    const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                 color: const Color(0xFF3976EF),
                 textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                       fontFamily: 'Readex Pro',
@@ -251,7 +253,7 @@ class _ReaberturaWidgetState extends State<ReaberturaWidget> {
                               controller: _model.dropDProjetoValueController ??=
                                   FormFieldController<String>(
                                 _model.dropDProjetoValue ??=
-                                    FFAppState().Projeto,
+                                    FFAppState().projeto,
                               ),
                               options: APIProjetoCall.name(
                                 dropDProjetoAPIProjetoResponse.jsonBody,
@@ -341,7 +343,7 @@ class _ReaberturaWidgetState extends State<ReaberturaWidget> {
                                     _model.dropDOcorrenciaValueController ??=
                                         FormFieldController<String>(
                                   _model.dropDOcorrenciaValue ??=
-                                      FFAppState().Ocorrencia,
+                                      FFAppState().ocorrencia,
                                 ),
                                 options: (getJsonField(
                                   dropDOcorrenciaAPIOcorrenciaResponse.jsonBody,
@@ -419,7 +421,7 @@ class _ReaberturaWidgetState extends State<ReaberturaWidget> {
                               return FlutterFlowDropDown<String>(
                                 controller: _model.dropDTipoValueController ??=
                                     FormFieldController<String>(
-                                  _model.dropDTipoValue ??= FFAppState().Tipo,
+                                  _model.dropDTipoValue ??= FFAppState().tipo,
                                 ),
                                 options: (getJsonField(
                                   dropDTipoAPITiposPedidosResponse.jsonBody,
@@ -442,7 +444,6 @@ class _ReaberturaWidgetState extends State<ReaberturaWidget> {
 
                                     shouldSetState = true;
                                   } else {
-                                    if (shouldSetState) setState(() {});
                                     return;
                                   }
 
@@ -589,7 +590,7 @@ class _ReaberturaWidgetState extends State<ReaberturaWidget> {
                                 size: 25.0,
                               ),
                               onPressed: () {
-                                print('IconButton pressed ...');
+                                // print('IconButton pressed ...');
                               },
                             ),
                           ),

@@ -6,7 +6,12 @@ import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'os_model.dart';
+
+import 'package:logging/logging.dart';
+
 export 'os_model.dart';
+
+final Logger _logger = Logger('OsWidget');
 
 class OsWidget extends StatefulWidget {
   const OsWidget({
@@ -47,7 +52,8 @@ class _OsWidgetState extends State<OsWidget> {
     super.initState();
     _model = createModel(context, () => OsModel());
 
-    getCurrentUserLocation(defaultLocation: const LatLng(0.0, 0.0), cached: true)
+    getCurrentUserLocation(
+            defaultLocation: const LatLng(0.0, 0.0), cached: true)
         .then((loc) => setState(() => currentUserLocationValue = loc));
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -127,8 +133,8 @@ class _OsWidgetState extends State<OsWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding:
-                      const EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(
+                      20.0, 20.0, 20.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -362,9 +368,8 @@ class _OsWidgetState extends State<OsWidget> {
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Padding(
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 0.0, 5.0, 0.0),
+                                            padding: const EdgeInsetsDirectional
+                                                .fromSTEB(0.0, 0.0, 5.0, 0.0),
                                             child: Text(
                                               'Evidência',
                                               textAlign: TextAlign.start,
@@ -381,14 +386,17 @@ class _OsWidgetState extends State<OsWidget> {
                                           Opacity(
                                             opacity: 0.5,
                                             child: Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(5.0, 8.0, 0.0, 8.0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      5.0, 8.0, 0.0, 8.0),
                                               child: FlutterFlowIconButton(
                                                 borderColor: Colors.transparent,
                                                 borderRadius: 15.0,
                                                 borderWidth: 1.0,
                                                 buttonSize: 60.0,
-                                                fillColor: const Color(0xFF4898F8),
+                                                fillColor:
+                                                    const Color(0xFF4898F8),
                                                 icon: Icon(
                                                   Icons.camera_alt_rounded,
                                                   color: FlutterFlowTheme.of(
@@ -397,7 +405,7 @@ class _OsWidgetState extends State<OsWidget> {
                                                   size: 24.0,
                                                 ),
                                                 onPressed: () {
-                                                  print(
+                                                  _logger.info(
                                                       'IconButton pressed ...');
                                                 },
                                               ),
@@ -427,8 +435,10 @@ class _OsWidgetState extends State<OsWidget> {
                                           Opacity(
                                             opacity: 0.5,
                                             child: Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(7.0, 8.0, 0.0, 8.0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      7.0, 8.0, 0.0, 8.0),
                                               child: FlutterFlowIconButton(
                                                 key: ValueKey(
                                                     currentUserLocationValue!
@@ -493,14 +503,17 @@ class _OsWidgetState extends State<OsWidget> {
                                           Opacity(
                                             opacity: 0.5,
                                             child: Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(8.0, 8.0, 0.0, 8.0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      8.0, 8.0, 0.0, 8.0),
                                               child: FlutterFlowIconButton(
                                                 borderColor: Colors.transparent,
                                                 borderRadius: 15.0,
                                                 borderWidth: 1.0,
                                                 buttonSize: 60.0,
-                                                fillColor: const Color(0xFF4898F8),
+                                                fillColor:
+                                                    const Color(0xFF4898F8),
                                                 icon: Icon(
                                                   Icons.border_color_sharp,
                                                   color: FlutterFlowTheme.of(
@@ -509,7 +522,7 @@ class _OsWidgetState extends State<OsWidget> {
                                                   size: 24.0,
                                                 ),
                                                 onPressed: () {
-                                                  print(
+                                                  _logger.info(
                                                       'IconButton pressed ...');
                                                 },
                                               ),
@@ -526,9 +539,8 @@ class _OsWidgetState extends State<OsWidget> {
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Padding(
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    1.0, 0.0, 0.0, 0.0),
+                                            padding: const EdgeInsetsDirectional
+                                                .fromSTEB(1.0, 0.0, 0.0, 0.0),
                                             child: Text(
                                               'Reabrir',
                                               textAlign: TextAlign.start,
@@ -545,15 +557,17 @@ class _OsWidgetState extends State<OsWidget> {
                                           Opacity(
                                             opacity: 0.5,
                                             child: Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
                                                       30.0, 8.0, 0.0, 8.0),
                                               child: FlutterFlowIconButton(
                                                 borderColor: Colors.transparent,
                                                 borderRadius: 15.0,
                                                 borderWidth: 1.0,
                                                 buttonSize: 60.0,
-                                                fillColor: const Color(0xFF4898F8),
+                                                fillColor:
+                                                    const Color(0xFF4898F8),
                                                 icon: Icon(
                                                   Icons.cached,
                                                   color: FlutterFlowTheme.of(
@@ -562,15 +576,15 @@ class _OsWidgetState extends State<OsWidget> {
                                                   size: 24.0,
                                                 ),
                                                 onPressed: () async {
-                                                  FFAppState().OS =
+                                                  FFAppState().os =
                                                       widget.parOS!;
-                                                  FFAppState().Projeto =
+                                                  FFAppState().projeto =
                                                       widget.parProjeto!;
-                                                  FFAppState().Ocorrencia =
+                                                  FFAppState().ocorrencia =
                                                       widget.parOcorrencia!;
-                                                  FFAppState().Tipo =
+                                                  FFAppState().tipo =
                                                       widget.parTipo!;
-                                                  FFAppState().Descriptiom =
+                                                  FFAppState().description =
                                                       widget.parObs!;
                                                   FFAppState().update(() {});
 
@@ -580,16 +594,16 @@ class _OsWidgetState extends State<OsWidget> {
                                                       'osNumber':
                                                           serializeParam(
                                                         widget.parOS,
-                                                        ParamType.String,
+                                                        ParamType.string,
                                                       ),
                                                       'project': serializeParam(
                                                         widget.parProjeto,
-                                                        ParamType.String,
+                                                        ParamType.string,
                                                       ),
                                                       'description':
                                                           serializeParam(
                                                         widget.parObs,
-                                                        ParamType.String,
+                                                        ParamType.string,
                                                       ),
                                                     }.withoutNulls,
                                                   );

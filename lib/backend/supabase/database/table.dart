@@ -4,8 +4,8 @@ abstract class SupabaseTable<T extends SupabaseDataRow> {
   String get tableName;
   T createRow(Map<String, dynamic> data);
 
-  PostgrestFilterBuilder<T> _select<T>() =>
-      SupaFlow.client.from(tableName).select<T>();
+  PostgrestFilterBuilder<R> _select<R>() =>
+      SupaFlow.client.from(tableName).select<R>();
 
   Future<List<T>> queryRows({
     required PostgrestTransformBuilder Function(PostgrestFilterBuilder) queryFn,
@@ -26,8 +26,9 @@ abstract class SupabaseTable<T extends SupabaseDataRow> {
           .limit(1)
           .select<PostgrestMap?>()
           .maybeSingle()
-          .catchError((e) => print('Error querying row: $e'))
-          .then((r) => [if (r != null) createRow(r)]);
+          .catchError((e) {
+        throw Exception('Error querying row: $e');
+      }).then((r) => [if (r != null) createRow(r)]);
 
   Future<T> insert(Map<String, dynamic> data) => SupaFlow.client
       .from(tableName)

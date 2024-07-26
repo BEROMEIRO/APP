@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:logger/logger.dart'; // Certifique-se de que o pacote está importado corretamente
 
 import 'schema/util/firestore_util.dart';
-
 import 'schema/users_record.dart';
 
 export 'dart:async' show StreamSubscription;
@@ -10,10 +10,11 @@ export 'package:firebase_core/firebase_core.dart';
 export 'schema/index.dart';
 export 'schema/util/firestore_util.dart';
 export 'schema/util/schema_util.dart';
-
 export 'schema/users_record.dart';
 
-/// Functions to query UsersRecords (as a Stream and as a Future).
+// Inicialize o Logger
+final Logger logger = Logger();
+
 Future<int> queryUsersRecordCount({
   Query Function(Query)? queryBuilder,
   int limit = -1,
@@ -61,9 +62,12 @@ Future<int> queryCollectionCount(
     query = query.limit(limit);
   }
 
-  return query.count().get().catchError((err) {
-    print('Error querying $collection: $err');
-  }).then((value) => value.count!);
+  return query.count().get().then((value) {
+    return value.count ?? 0;
+  }).catchError((err) {
+    logger.e('Error querying $collection: $err');
+    return Future.value(0); // Retornando um Future<int> com valor 0
+  });
 }
 
 Stream<List<T>> queryCollection<T>(
@@ -79,12 +83,13 @@ Stream<List<T>> queryCollection<T>(
     query = query.limit(singleRecord ? 1 : limit);
   }
   return query.snapshots().handleError((err) {
-    print('Error querying $collection: $err');
+    logger.e('Error querying $collection: $err');
+    return <T>[]; // Retorna uma lista vazia em caso de erro
   }).map((s) => s.docs
       .map(
         (d) => safeGet(
           () => recordBuilder(d),
-          (e) => print('Error serializing doc ${d.reference.path}:\n$e'),
+          (e) => logger.e('Error serializing doc ${d.reference.path}:\n$e'),
         ),
       )
       .where((d) => d != null)
@@ -104,16 +109,22 @@ Future<List<T>> queryCollectionOnce<T>(
   if (limit > 0 || singleRecord) {
     query = query.limit(singleRecord ? 1 : limit);
   }
-  return query.get().then((s) => s.docs
-      .map(
-        (d) => safeGet(
-          () => recordBuilder(d),
-          (e) => print('Error serializing doc ${d.reference.path}:\n$e'),
-        ),
-      )
-      .where((d) => d != null)
-      .map((d) => d!)
-      .toList());
+  return query
+      .get()
+      .then((s) => s.docs
+          .map(
+            (d) => safeGet(
+              () => recordBuilder(d),
+              (e) => logger.e('Error serializing doc ${d.reference.path}:\n$e'),
+            ),
+          )
+          .where((d) => d != null)
+          .map((d) => d!)
+          .toList())
+      .catchError((err) {
+    logger.e('Error querying $collection: $err');
+    return <T>[]; // Retorna uma lista vazia em caso de erro
+  });
 }
 
 Filter filterIn(String field, List? list) => (list?.isEmpty ?? true)
@@ -173,7 +184,7 @@ Future<FFFirestorePage<T>> queryCollectionPage<T>(
       .map(
         (d) => safeGet(
           () => recordBuilder(d),
-          (e) => print('Error serializing doc ${d.reference.path}:\n$e'),
+          (e) => logger.e('Error serializing doc ${d.reference.path}:\n$e'),
         ),
       )
       .where((d) => d != null)
